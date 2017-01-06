@@ -1,0 +1,15 @@
+include ../abstracts/bemto/bemto.pug
+
+
++b.SECTION.reviews
+  +e.H2.title Отзывы
+  .container
+    +e.gallery
+      - for (var i=0;i<3;i++)
+        +e.slide        
+          +e.img
+            img(src="img/person1.jpg", alt="person", title="person", itemprop="image")
+          +e.name Кирилл Быков
+          +e.BLOCKQUOTE.quote «Спасибо SkyDrive за лучшие 30 секунд в моей жизни!»
+
+

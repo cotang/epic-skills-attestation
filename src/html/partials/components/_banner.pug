@@ -1,0 +1,15 @@
+include ../abstracts/bemto/bemto.pug
+
+
++b.SECTION.banner
+  +e.gallery
+    - for (var i=0;i<3;i++)
+      +e.slide
+        img(src="img/slide1.jpg", alt="banner1", title="banner1")
+        +e.text-wrapper
+          .container
+            .row
+              .col-xs-12.col-lg-6.offset-lg-1
+                +e.slogan Отправим в полёт вашей мечты в любое время года
+
+

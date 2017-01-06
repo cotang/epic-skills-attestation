@@ -1,0 +1,39 @@
+.offers{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &__item{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__icon{
+    min-height: 60px;    
+    &:after{
+      content: '';
+      display: block;
+      margin: 0 auto;
+    }
+    &--gift{
+      &:after{
+        @include sprite($s-offer-gift);
+      }      
+    }
+    &--school{
+      &:after{
+        @include sprite($s-offer-school);
+      }
+    }
+  }
+  &__title{
+    font-size: $font-size--big;
+    @include font-family('Roboto Medium', normal, normal);
+    margin: 10px 0 5px;
+  }
+  &__text{
+    margin: 0 auto;
+    max-width: 50%;
+  }
+  &__btn{
+    margin-top: 25px;
+  }
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// 3rd party
+@import "partials/abstracts/variables";
+@import "partials/abstracts/bootstrap-flex";
+@import "vendor/normalize";
+@import "vendor/mq";
+@import "vendor/slick";
+
+
+// Abstracts
+@import "partials/abstracts/mixins";
+@import "partials/abstracts/png-sprite";
+
+// Base
+@import "partials/base/typography";
+@import "partials/base/template";
+
+// Components
+
+@import "partials/components/header";
+@import "partials/components/footer";
+@import "partials/components/btn";
+
+
+@import "partials/components/banner";
+@import "partials/components/facts";
+@import "partials/components/services";
+@import "partials/components/offers";
+@import "partials/components/reviews";
+@import "partials/components/gallery";
+@import "partials/components/contacts";
+
+
+

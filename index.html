@@ -142,8 +142,8 @@
                 <div class="services__img">
                   <img src="img/plane.jpg" alt="plane" title="plane" itemprop="image">
                 </div>
-                <h3 class="services__title">На самолёте</h3>
-                <div class="services__text">Захватывающие полёты круглый год</div>
+                <h3 class="services__title" itemprop="offers">На самолёте</h3>
+                <div class="services__text" itemprop="description">Захватывающие полёты круглый год</div>
               </a>
             </article>
             <article class="services__item col-xs-12 col-lg-4">
@@ -151,8 +151,8 @@
                 <div class="services__img">
                   <img src="img/tube.jpg" alt="tube" title="tube" itemprop="image">
                 </div>
-                <h3 class="services__title">Аэротруба</h3>
-                <div class="services__text">Свободное падение для взрослых и детей</div>
+                <h3 class="services__title" itemprop="offers">Аэротруба</h3>
+                <div class="services__text" itemprop="description">Свободное падение для взрослых и детей</div>
               </a>
             </article>
             <article class="services__item col-xs-12 col-lg-4">
@@ -160,8 +160,8 @@
                 <div class="services__img">
                   <img src="img/parachute.jpg" alt="parachute" title="parachute" itemprop="image">
                 </div>
-                <h3 class="services__title">Прыжок с парашютом</h3>
-                <div class="services__text">Доза адреналина для экстремалов</div>
+                <h3 class="services__title" itemprop="offers">Прыжок с парашютом</h3>
+                <div class="services__text" itemprop="description">Доза адреналина для экстремалов</div>
               </a>
             </article>
           </div>
@@ -169,8 +169,8 @@
             <div class="col-xs-12">
               <div class="services-banner">
                 <div class="services-banner__text-wrapper">
-                  <h3 class="services-banner__title">И ещё более 15 воздушных транспортных средств</h3>
-                  <div class="services-banner__text">Вертолёты, парапланы, воздушные шары и многое другое от 2000 р</div>
+                  <h3 class="services-banner__title" itemprop="offers">И ещё более 15 воздушных транспортных средств</h3>
+                  <div class="services-banner__text" itemprop="offers">Вертолёты, парапланы, воздушные шары и многое другое от 2000 р</div>
                   <div class="services-banner__btn">
                     <a class="btn" href="#">Выбрать полет</a>
                   </div>
@@ -181,23 +181,23 @@
         </div>
       </section>
       <!-- Offers-->
-      <section class="offers">
+      <section class="offers" itemscope itemtype="http://schema.org/Offer">
         <div class="container">
           <div class="row">
             <article class="offers__item col-xs-12 col-lg-6">
               <div class="offers__icon offers__icon--gift"></div>
-              <h3 class="offers__title">Подарочные сертификаты</h3>
-              <div class="offers__text">Дарите радость полёта друзьям и близким</div>
+              <h3 class="offers__title" itemprop="itemOffered">Подарочные сертификаты</h3>
+              <div class="offers__text" itemprop="description">Дарите радость полёта друзьям и близким</div>
               <div class="offers__btn">
                 <a class="btn btn--blue" href="#">Узнать больше</a>
               </div>
             </article>
             <article class="offers__item col-xs-12 col-lg-6">
               <div class="offers__icon offers__icon--school"></div>
-              <h3 class="offers__title">Школа полётов</h3>
-              <div class="offers__text">Мастера лётного дела обучат вас высшему пилотажу</div>
+              <h3 class="offers__title" itemprop="itemOffered">Школа полётов</h3>
+              <div class="offers__text" itemprop="description">Мастера лётного дела обучат вас высшему пилотажу</div>
               <div class="offers__btn">
-                <a class="btn btn--blue" href="#">Узнать больше</a>
+                <a class="btn btn--blue" href="#">Узнать больше </a>
               </div>
             </article>
           </div>
@@ -208,26 +208,26 @@
         <h2 class="reviews__title">Отзывы</h2>
         <div class="container">
           <div class="reviews__gallery">
-            <div class="reviews__slide">
+            <div class="reviews__slide" itemscope itemtype="http://schema.org/Review">
               <div class="reviews__img">
                 <img src="img/person1.jpg" alt="person" title="person" itemprop="image">
               </div>
-              <div class="reviews__name">Кирилл Быков</div>
-              <blockquote class="reviews__quote">«Спасибо SkyDrive за лучшие 30 секунд в моей жизни!»</blockquote>
+              <div class="reviews__name" itemprop="author">Кирилл Быков</div>
+              <blockquote class="reviews__quote" itemprop="reviewBody">«Спасибо SkyDrive за лучшие 30 секунд в моей жизни!»</blockquote>
             </div>
-            <div class="reviews__slide">
+            <div class="reviews__slide" itemscope itemtype="http://schema.org/Review">
               <div class="reviews__img">
                 <img src="img/person1.jpg" alt="person" title="person" itemprop="image">
               </div>
-              <div class="reviews__name">Кирилл Быков</div>
-              <blockquote class="reviews__quote">«Спасибо SkyDrive за лучшие 30 секунд в моей жизни!»</blockquote>
+              <div class="reviews__name" itemprop="author">Кирилл Быков</div>
+              <blockquote class="reviews__quote" itemprop="reviewBody">«Спасибо SkyDrive за лучшие 30 секунд в моей жизни!»</blockquote>
             </div>
-            <div class="reviews__slide">
+            <div class="reviews__slide" itemscope itemtype="http://schema.org/Review">
               <div class="reviews__img">
                 <img src="img/person1.jpg" alt="person" title="person" itemprop="image">
               </div>
-              <div class="reviews__name">Кирилл Быков</div>
-              <blockquote class="reviews__quote">«Спасибо SkyDrive за лучшие 30 секунд в моей жизни!»</blockquote>
+              <div class="reviews__name" itemprop="author">Кирилл Быков</div>
+              <blockquote class="reviews__quote" itemprop="reviewBody">«Спасибо SkyDrive за лучшие 30 секунд в моей жизни!»</blockquote>
             </div>
           </div>
         </div>
@@ -267,11 +267,11 @@
           <div class="contacts__map-inner">
             <div class="container">
               <div class="contacts__info-wrapper">
-                <div class="contacts-info">
-                  <h3 class="contacts-info__title">Аэродром Сиворицы</h3>
-                  <div class="contacts-info__address">60-й км Киевского шоссе, село Никольское </div>
-                  <a class="contacts-info__tel" href="tel:+7 812 469-92-32" target="_blank">+7 812 469-92-32</a>
-                  <div class="contacts-info__working-hours">с 8:00 до 21:00</div>
+                <div class="contacts-info" itemscope itemtype="http://schema.org/ContactPoint">
+                  <h3 class="contacts-info__title" itemprop="name">Аэродром Сиворицы</h3>
+                  <div class="contacts-info__address" itemprop="areaServed">60-й км Киевского шоссе, село Никольское </div>
+                  <a class="contacts-info__tel" href="tel:+7 812 469-92-32" target="_blank" itemprop="telephone">+7 812 469-92-32</a>
+                  <div class="contacts-info__working-hours" itemprop="hoursAvailable">с 8:00 до 21:00</div>
                   <a class="contacts-info__route" href="#">Проложить маршрут</a>
                 </div>
               </div>

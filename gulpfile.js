@@ -1,8 +1,8 @@
 'use strict';
 
 // Set Env
-// process.env.NODE_ENV = 'development';
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
+// process.env.NODE_ENV = 'production';
 
 // Check ENV
 global.devBuild = process.env.NODE_ENV !== 'production';
@@ -59,6 +59,7 @@ const ghPages = require('gulp-gh-pages');
 var path = {
   build: {
     html: 'build',
+    php: 'build',
     js: 'build/js/',
     css: 'build/css/',
     img: 'build/img/',
@@ -69,8 +70,9 @@ var path = {
     deploy: 'build/**/*'
   },
   src: {
-    html: ['src/html/**/*.pug', 'src/html/**/*.php', '!src/html/partials/abstracts/bemto/**/*.*'],
+    html: ['src/html/**/*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
     htmlDir: 'src/html',
+    php: 'src/html/*.php',
     js: 'src/js/*.js',
     css: './src/css/*.scss',
     img: ['src/img/**/**.*', '!src/img/png-sprite/*.*', '!src/img/svg-sprite/*.*'],
@@ -81,6 +83,7 @@ var path = {
   },
   watch: {
     html: 'src/html/**/*.pug',
+    php: 'src/html/*.php',
     js: 'src/js/**/*.js',
     css: 'src/css/**/*.scss',
     img: 'src/img/*.*',
@@ -112,6 +115,13 @@ gulp.task('pug', function() {
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({stream: true}));
 })
+
+// Copying php (simple files for the landings mainly)
+gulp.task('php', function() {
+  return gulp.src(path.src.php)
+    .pipe(gulp.dest(path.build.php))
+    .pipe(reload({stream: true}));
+});
 
 // Compilation sass
 gulp.task('sass', function () {
@@ -230,7 +240,7 @@ gulp.task('clean', function () {
 
 // Overall build
 gulp.task('build', function (cb) {
-  runSequence('clean', ['pug', 'png-sprites', 'svg-sprites', 'img', 'sass', 'js', 'fonts'], cb);
+  runSequence('clean', ['pug', 'php', 'png-sprites', 'svg-sprites', 'img', 'sass', 'js', 'fonts'], cb);
 });     
 
 
@@ -274,6 +284,9 @@ gulp.task('watch', ['setWatch', 'browserSync'], function(){
   });
   gulp.watch([path.watch.fonts], function(event, cb) {
     gulp.start('fonts');
+  });
+  gulp.watch([path.watch.php], function(event, cb) {
+    gulp.start('php');
   });
 });
 

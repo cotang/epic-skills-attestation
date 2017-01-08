@@ -8,25 +8,25 @@ include ../abstracts/bemto/bemto.pug
         +e.A.link(href="#")
           +e.DIV.img
             img(src="img/plane.jpg", alt="plane", title="plane", itemprop="image")
-          +e.H3.title На самолёте
-          +e.DIV.text Захватывающие полёты круглый год
+          +e.H3.title(itemprop="offers") На самолёте
+          +e.DIV.text(itemprop="description") Захватывающие полёты круглый год
       +e.ARTICLE.item.col-xs-12.col-lg-4
         +e.A.link(href="#")
           +e.DIV.img
             img(src="img/tube.jpg", alt="tube", title="tube", itemprop="image")
-          +e.H3.title Аэротруба
-          +e.DIV.text Свободное падение для взрослых и детей
+          +e.H3.title(itemprop="offers") Аэротруба
+          +e.DIV.text(itemprop="description") Свободное падение для взрослых и детей
       +e.ARTICLE.item.col-xs-12.col-lg-4
         +e.A.link(href="#")
           +e.DIV.img
             img(src="img/parachute.jpg", alt="parachute", title="parachute", itemprop="image")
-          +e.H3.title Прыжок с парашютом
-          +e.DIV.text Доза адреналина для экстремалов
+          +e.H3.title(itemprop="offers") Прыжок с парашютом
+          +e.DIV.text(itemprop="description") Доза адреналина для экстремалов
     .row
       .col-xs-12
         +b.services-banner
           +e.text-wrapper
-            +e.H3.title И ещё более 15 воздушных транспортных средств
-            +e.text Вертолёты, парапланы, воздушные шары и многое другое от 2000 р
+            +e.H3.title(itemprop="offers") И ещё более 15 воздушных транспортных средств
+            +e.text(itemprop="offers") Вертолёты, парапланы, воздушные шары и многое другое от 2000 р
             +e.btn
               +b.A.btn(href="#") Выбрать полет

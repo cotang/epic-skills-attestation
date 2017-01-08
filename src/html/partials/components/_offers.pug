@@ -1,18 +1,18 @@
 include ../abstracts/bemto/bemto.pug
 
 
-+b.SECTION.offers
++b.SECTION.offers(itemscope, itemtype="http://schema.org/Offer")
   .container
     .row
       +e.ARTICLE.item.col-xs-12.col-lg-6
         +e.icon--gift
-        +e.H3.title Подарочные сертификаты
-        +e.text Дарите радость полёта друзьям и близким
+        +e.H3.title(itemprop="itemOffered") Подарочные сертификаты
+        +e.text(itemprop="description") Дарите радость полёта друзьям и близким
         +e.btn
           +b.A.btn--blue(href="#") Узнать больше
       +e.ARTICLE.item.col-xs-12.col-lg-6
         +e.icon--school
-        +e.H3.title Школа полётов
-        +e.text Мастера лётного дела обучат вас высшему пилотажу
+        +e.H3.title(itemprop="itemOffered") Школа полётов
+        +e.text(itemprop="description") Мастера лётного дела обучат вас высшему пилотажу
         +e.btn
-          +b.A.btn--blue(href="#") Узнать больше
+          +b.A.btn--blue(href="#") Узнать больше 

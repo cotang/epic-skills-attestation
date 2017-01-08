@@ -8,11 +8,11 @@ include ../abstracts/bemto/bemto.pug
     +e.map-inner
       .container
         +e.info-wrapper
-          +b.contacts-info
-            +e.H3.title Аэродром Сиворицы
-            +e.address 60-й км Киевского шоссе, село Никольское    
-            +e.A.tel(href="tel:+7 812 469-92-32", target="_blank") +7 812 469-92-32
-            +e.working-hours с 8:00 до 21:00
+          +b.contacts-info(itemscope, itemtype="http://schema.org/ContactPoint")
+            +e.H3.title(itemprop="name") Аэродром Сиворицы
+            +e.address(itemprop="areaServed") 60-й км Киевского шоссе, село Никольское    
+            +e.A.tel(href="tel:+7 812 469-92-32", target="_blank", itemprop="telephone") +7 812 469-92-32
+            +e.working-hours(itemprop="hoursAvailable") с 8:00 до 21:00
             +e.A.route(href="#") Проложить маршрут
 
 

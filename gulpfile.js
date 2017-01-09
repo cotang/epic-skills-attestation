@@ -98,10 +98,7 @@ var path = {
 // Compilation pug
 gulp.task('pug', function() {
   return gulp.src(path.src.html)
-    .pipe(plumber(function(error) {
-      gutil.log(gutil.colors.red(error.message));
-      this.emit('end');
-    }))
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(gulpif(devBuild, changed(path.build.html, {extension: '.html'})))
     .pipe(gulpif(global.isWatching, cached('pug')))
     .pipe(pugInheritance({basedir: path.src.htmlDir, extension: '.pug', skip:'node_modules'}))
